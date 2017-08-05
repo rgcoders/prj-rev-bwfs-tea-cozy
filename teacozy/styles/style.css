@@ -1,0 +1,185 @@
+body {
+    font-family: Helvetica, sans-serif;
+    color: seashell;
+    background-color: black;
+    font-size: 22px;
+    text-align: center;
+    margin: 0px;
+}
+
+h2, h3, h4 {
+    margin: 0px;
+    padding: 10px;
+}
+
+h2 {
+    display: block;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+h3 {
+    display: block;
+    font-size: 1.17em;
+    font-weight: bold;
+}
+
+h4 {
+    display: block;
+    font-weight: bold;
+}
+
+h5 {
+    display: block;
+    font-size: 0.83em;
+    font-weight: bold;
+}
+
+div {
+    display: block /* Displays an element as a block element (like <p>)*/
+}
+
+.flex-container {
+    display: flex; /* FLEX 
+                   allows photos in Tea section to 
+                   center and 
+                   wrap in  
+                   3 row 
+                   2 row layout 
+                   * Note: The Width of Div Class "Main" 1200px limits 
+                   Tea section to a max of 3 photos 
+                   no matter how wide I stretch screen
+                   If the screen was set to a % instead of pixels instead,
+                   the first row could expand beyond 3 photos
+                   But the Flex behavior is constrained by the
+                   parent container Div Width
+                   */
+
+    justify-content: center; /* centers Tea section photos. otherwise, they'd align left */
+    flex-wrap: wrap;  /* wrap flex items to next line as needed */
+                     /* wrap gives photos in Tea section a nice 3 row, 2 row layout */
+}
+
+header {
+    width: 100%;
+    position: fixed; /* Fixes Header and Nav items in place. 
+                        That way, they stay in same place even when you scroll.*/
+    z-index: 1; /* makes header items the top layer */
+    height: 70px;
+    background-color: black;
+    align-items: center; /* vertically centers nav items */
+    border-bottom: 1px solid seashell; /* adds thin bottom border for style */
+}
+
+header img {
+    height: 50px;
+    padding-left: 10px; /* gives cushion/space to left of image */
+}
+
+nav {
+    text-align: right; /* shifts nav items to the right */ 
+    flex-grow: 1; 
+    /* The flex-grow property allows us to specify if items should 
+    grow to fill a container and also which items should 
+    grow proportionally more or less than others. 
+    
+    In this case, flex-grow: 1 pushes nav items to far right and 
+    header img to the far left.
+
+    Without flex-grow: 1, the "Tea Cozy" image and nav items
+    will collapse into the center.
+
+    INSIGHT: As a result, flex-grow: 1 is critical to the design of the
+    header and nav section of this website.
+    */
+}
+
+a {
+    color: seashell; /* changes color of anchor links */
+}
+
+nav span {
+    display: inline-block; /* displays nav items on same line */
+    padding: 20px 10px; /* adds space above and around na items */
+}
+
+.main {
+    padding-top: 70px; /* adds padding above section content for styling */
+    opacity: 0.9; /* dims background photo */
+    width: 1200px;
+    margin: auto;
+}
+
+#mission {
+    height: 700px; /* sets section height */
+    background-image: url("../resources/photos/img-mission-background.jpg");
+    padding-top: 70px; /* adds padding above word content for styling */
+}
+
+#mission .content {
+    background-color: black; /* black background for styling */
+    width: 100%; /* ensures section spans width of page */
+    margin: auto; /* helps background image fill out page 
+                     vertically centers word content */
+}
+
+#store {
+    height: 700px;
+    width: 1000px;
+    padding-top: 70px;
+    margin: auto;
+}
+.item {
+    padding: 5px;
+}
+
+.item img {
+    height: 200px;
+    display: block;
+    margin: 10px;
+}
+#locations {
+    background-image: url(../resources/photos/img-locations-background.jpg);
+    height: 500px;
+    padding-top: 70px;
+}
+
+#locations .flex-container {
+    width: 1100px;
+    margin: auto;
+}
+.flex-container.locations {
+    padding-top: 5px;
+}
+.flex-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.location {
+    display: flex; /* FLEX */
+    flex-direction: column; /* Puts Location info into 3 clean columns. 
+                            Otherwise, text collapses into each other */
+    justify-content: center;
+    opacity: 1;
+    background-color: black; /* Gives text black background for styling */
+    flex-basis: 280px; /* flex-basis allows us to specify the width of an item 
+                          before it stretches or shrinks. */
+    padding: 10px;
+    margin: 5px 20px; /* puts spacing between columns so that backfround image comes through */
+}
+#contact {
+    height: 200px;
+}
+
+#contact a {
+text-decoration: underline;
+color:rgb(0, 51, 187);
+}
+
+footer {
+    text-align: left; /* Aligns footer left. Otherwise, it would be centered 
+                         per inherited Div styling. */
+    padding-left: 20px;
+}
